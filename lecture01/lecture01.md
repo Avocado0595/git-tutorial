@@ -8,15 +8,16 @@
   
   
 
-## Git ở local (*là git nằm trên máy của mình ấy*)
+## Git ở local ( *là git nằm trên máy của mình ấy* )
 
 #### 1. Cài đặt
 
 Giờ muốn dùng git thì đầu tiên phải tải git cái đã, tải ở đây nè: [https://git-scm.com/](https://git-scm.com/) .
 
-Tải xong rồi cài vào máy nha, cứ next thôi là được rồi. Cài đặt xong rồi thì kiểm tra coi đã được chưa bằng cách mở cmd gõ: ```git --version```
+Tải xong rồi cài vào máy nha, cứ next thôi là được rồi. Cài đặt xong rồi thì kiểm tra coi đã được chưa bằng cách mở cmd gõ:
 
-  
+```git --version```
+
 
 Thấy hiện như này là oke con dê:
 
@@ -42,25 +43,25 @@ Chúng ta mở terminal lên:
 
 Có 2 cách:
 
-* Cách 1: nếu bạn dùng Visual Studio Code thì ấn ```Ctr + ` ``` , (hoặc bất kỳ ide nào có tích hợp terminal thì cứ bật lên thui)
+* Cách 1: nếu bạn dùng Visual Studio Code thì ấn ```Ctr + ` ``` , ( hoặc bất kỳ ide nào có tích hợp terminal thì cứ bật lên thui )
 
 ![vsc terminal](/lecture01/vsc-terminal.png)
 
-* Cách 2: mở cmd (hoặc powershell) tại thư mục chứa code tương ứng
+* Cách 2: mở cmd  ( hoặc powershell ) tại thư mục chứa code tương ứng
 
   
 
-(tip: bạn mở thư mục chứa code:
+( tip: bạn mở thư mục chứa code:
 
 ![cmd1](/lecture01/cmd1.png)
 
   
 
-gõ vào ô đường dẫn ```cmd``` (hoặc ```powershell```), xong enter:
+gõ vào ô đường dẫn ```cmd``` ( hoặc ```powershell``` ), xong enter:
 
 ![cmd2](/lecture01/cmd2.png)
 
-tada =))) cmd hiện ra ngay đúng thư mục của mình (*nếu mọi người đã quen với các câu lệnh trên cmd thì có thể dùng ```cd <tên folder>``` để di chuyển đến thư mục mình cần!*)
+tada =))) cmd hiện ra ngay đúng thư mục của mình (*nếu mọi người đã quen với các câu lệnh trên cmd thì có thể dùng ```cd <tên folder>``` để di chuyển đến thư mục mình cần!* )
 
   
 
@@ -70,7 +71,7 @@ Giờ sẽ là dòng lệnh đầu tiên: ```git init```
 
   ![git init](/lecture01/git_init.png)
 
-*Có ý nghĩa là khởi tạo 1 git repository local ngay trong thư mục (ý là phải khởi tạo tui đi thì tui mới chạy được chứ!)*
+*Có ý nghĩa là khởi tạo 1 git repository local ngay trong thư mục ( ý là phải khởi tạo tui đi thì tui mới chạy được chứ ! )*
 Lúc này nếu bạn kiểm tra trong thư mục, bật hiển thị file ẩn thì sẽ thấy có 1 file ```.git```
 
 Tiếp theo là: ```git add .```
@@ -83,7 +84,7 @@ Dùng lệnh ```git status``` để kiểm tra xem đã add đúng chưa nha
 
 ![git status](/lecture01/git_status.png)
 
-Sau khi add thì mình còn 1 bước nữa (tạm gọi là xác nhận những thay đổi) với lệnh: ```git commit -m “<ghi chú nội dung>” ```
+Sau khi add thì mình còn 1 bước nữa ( tạm gọi là xác nhận những thay đổi ) với lệnh: ```git commit -m “<ghi chú nội dung>” ```
 
 Nhớ là có dấu ngoặc kép “” trong phần ghi chú nha, ví dụ: ```git commit -m “first commit”```
 
@@ -94,19 +95,19 @@ Kiểm tra commit: ```git log```
 
 ![git log](/lecture01/git_log.png)
 
-Chỗ này sẽ hiện ra id commit (do git tự tạo – sau này sẽ có lúc cần đến), người commit (author), thời gian commit, và ghi chú commit.
+Chỗ này sẽ hiện ra id commit ( do git tự tạo – sau này sẽ có lúc cần đến ), người commit ( author ), thời gian commit, và ghi chú commit.
 
 Tén tèn! Vậy là đã lưu dc rồi, giờ tới phần tiếp theo là up code lên github.
 
-## Git Remote (*nơi lưu trữ code online*)
+## Git Remote ( *nơi lưu trữ code online* )
 
 Để up code lên github thì ... phải đăng nhập github đã: [https://github.com/](https://github.com/) *(ai chưa có tài khoản thì nhớ đăng ký nhé)*
 
-Sau khi đăng nhập thành công, chúng ta cùng tạo 1 repository (*từ này dịch tiếng việt nghĩa là kho - ý là cái kho để lưu và quản lý code cho chúng ta ấy!*).
+Sau khi đăng nhập thành công, chúng ta cùng tạo 1 repository ( *từ này dịch tiếng việt nghĩa là kho - ý là cái kho để lưu và quản lý code cho chúng ta ấy !* ).
 
 Click nút New:
 
-![new repo](/lecture01/new_repo.png)
+![new repo](/lecture01/new_repo.jpg)
 
 Mọi người sẽ thấy 1 giao diện như thế này:
 
@@ -120,18 +121,18 @@ Mọi người sẽ thấy 1 giao diện như thế này:
    những người bạn cho phép mới thấy được)
  - Khởi tạo các file: ```README.md, .gitignore, license```
 
-(lưu ý: mục có * là bắt buột nhé)
+( lưu ý: mục có * là bắt buột nhé ! )
 
 Click Create Repository để tạo, chúng ta sẽ có được giao diện như sau:
 
 ![git log](/lecture01/repo_first_view.png)
 
-Ở đây, chúng ta sẽ thấy hướng dẫn để push (đẩy code) từ git local ban đầu lên git remote trên github. (có 1 hướng dẫn phía trên là tạo mới nữa, nhưng do chúng ta đã tạo ban đầu rồi thì không cần tạo nữa đâu nha)
+Ở đây, chúng ta sẽ thấy hướng dẫn để push ( đẩy code ) từ git local ban đầu lên git remote trên github. ( có 1 hướng dẫn phía trên là tạo mới nữa, nhưng do chúng ta đã tạo ban đầu rồi thì không cần tạo nữa đâu nha )
 
 Giờ thì mọi người có thể mở terminal và làm theo các bước hướng dẫn là được:
 ```git remote add origin <link repo>``` - thêm dường dẫn remote vào git local
 
-```git branch -M main``` - tạo 1 nhánh main (nhánh chính trong repo)
+```git branch -M main``` - tạo 1 nhánh main ( nhánh chính trong repo )
 
 ```git push -u origin main``` - push code ở nhánh main lên remote link
 
