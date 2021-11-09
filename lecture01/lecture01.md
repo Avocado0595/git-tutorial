@@ -110,7 +110,7 @@ Click nút New:
 
 Mọi người sẽ thấy 1 giao diện như thế này:
 
-![create repo](/lecture01/create_repo.jpg)
+![create repo](/lecture01/create_repo.png)
 
 Điền vào các thông tin cần thiết:
 
@@ -124,7 +124,7 @@ Mọi người sẽ thấy 1 giao diện như thế này:
 
 Click Create Repository để tạo, chúng ta sẽ có được giao diện như sau:
 
-![git log](/lecture01/repo_first_view.jpg)
+![git log](/lecture01/repo_first_view.png)
 
 Ở đây, chúng ta sẽ thấy hướng dẫn để push (đẩy code) từ git local ban đầu lên git remote trên github. (có 1 hướng dẫn phía trên là tạo mới nữa, nhưng do chúng ta đã tạo ban đầu rồi thì không cần tạo nữa đâu nha)
 
@@ -137,16 +137,16 @@ Giờ thì mọi người có thể mở terminal và làm theo các bước hư
 
 Khi push thành công, chúng ta sẽ được như thế này:
 
-![git push origin](/lecture01/git_push_origin.jpg)
+![git push origin](/lecture01/git_push_origin.png)
 
 và trên github là như này:
 
-![git push](/lecture01/push_github.jpg)
+![git push](/lecture01/push_github.png)
 
 Tada =))) Vậy là đã up được code lên github òi! :3 Quá là xịn xò, giờ chỉ cần gửi link là có thể chia sẻ code với mn mà không cần phải gửi 1 cục code nữa :3.
 Link chỗ này nè (nhớ chỉnh link https nha :3) :
 
-![link git](/lecture01/link_github.jpg)
+![link git](/lecture01/link_github.png)
 
 Nhưng mà ứng dụng của git không phải chỉ đơn giản là thế ! Ở bài viết sau mình sẽ giới thiệu chi tiết hơn về chức năng, cách hoạt động của git nhé ! Mọi người đọc thấy uki thì cho mình 1 sao github nhé <3 !!!!
 
