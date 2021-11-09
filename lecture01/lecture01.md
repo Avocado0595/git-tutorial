@@ -106,7 +106,7 @@ Sau khi đăng nhập thành công, chúng ta cùng tạo 1 repository (*từ n�
 
 Click nút New:
 
-![new repo](/lecture01/new_repo.jpg)
+![new repo](/lecture01/new_repo.png)
 
 Mọi người sẽ thấy 1 giao diện như thế này:
 
