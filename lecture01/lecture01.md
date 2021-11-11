@@ -152,3 +152,28 @@ Nhưng mà ứng dụng của git không phải chỉ đơn giản là thế ! �
 
 
 *Có thể bạn biết rồi: trang bạn đang đọc cũng được mình up lên github theo y như các bước trong hướng dẫn vậy :3*
+
+#### P/s: Một số lỗi thường gặp:
+1. Chưa login github trên máy:
+Nếu bạn ```git push``` mà máy báo lỗi: author indentity unkown thì là do có thể lúc cài đặt bị thiếu phần name, name, email:
+
+![link git](/lecture01/git_init_noname.png)
+
+lúc này chúng ta chỉ cần config thêm email, name như git hướng dẫn là được. Tuy nhiên, có thể lúc push bạn sẽ gặp thông báo như thế này:
+
+![link git](/lecture01/push_login.png)
+
+Chúng ta cần name và password để có thể push được
+
+Lưu ý: ở phiên bản mới sau này github cần access token thay cho mật khẩu, nên mọi người cần vào github để lấy access token nhé!
+* Để lấy token vào: Settings -> Developer settings -> Personal access tokens -> Generate new  access token, tùy chỉnh 1 vài quyền cho token và chọn create sẽ sinh ra 1 mã token. Copy token này lại. Thực hiện các bước sau để push nhé: 
+  + Gõ lệnh : ```git config credential.helper store``` *(dòng này để lưu lai thông tin login cho lần sau)*
+  + Dùng lệnh push như bình thường: ```git push```
+  + Sau đó git sẽ thông báo nhập name và password thì bạn nhập name login trên github, còn pass thì bạn dán access token vào. Thế là xong ! =))
+  + Lần sau chỉ cần ```git push``` là được!
+ 
+2. Bạn muốn thay đổi link remote:
+	Bạn muốn tạo 1 repo mới trên github và muốn đổi code trên máy sang repo này thì thực hiện như sau:
+	* Kiểm tra link remote cũ: ```git remote -v``` , bạn sẽ thấy link remote mình đã add trước đây
+	* Sau đó gõ: ```git remote set-url origin <link repo mới>```
+	* Rồi kiểm tra lại bằng ```git remote -v``` là được nha!
