@@ -161,7 +161,7 @@ Nếu bạn ```git push``` mà máy báo lỗi: author indentity unkown thì là
 
 lúc này chúng ta chỉ cần config thêm email, name như git hướng dẫn là được. Tuy nhiên, có thể lúc push bạn sẽ gặp thông báo như thế này:
 
-![link git](/lecture01/push_login.png)
+![link git](/lecture01/push_login_mess.png)
 
 Chúng ta cần name và password để có thể push được
 
