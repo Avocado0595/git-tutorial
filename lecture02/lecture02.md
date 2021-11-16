@@ -1,5 +1,7 @@
 
-Hiểu về git
+### Hiểu về git
+
+(Bài viết được tham khảo và dịch từ trang https://git-scm.com/ và https://www.atlassian.com/git/tutorials/ )
 
 + *Vấn đề 1:*  Vào 1 ngày đẹp trời, bạn đang code và chợt thấy rằng đoạn code A này không dùng nữa, thôi thì xóa đi, oke thế là bạn xóa nó đi. Vài hôm sau bạn lại thấy rằng, đoạn code cũ này xài tốt hơn mà, rồi làm sao nhớ được đoạn đó nhỉ? Oh, lại phải ngồi suy nghĩ lại thôi :”>. Quả thật là mất thời gian.
 
