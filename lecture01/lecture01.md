@@ -133,7 +133,7 @@ Giờ thì mọi người có thể mở terminal và làm theo các bước hư
 
 ```git branch -M main``` - tạo 1 nhánh main (nhánh chính trong repo)
 
-```git push -u origin main``` - push code ở nhánh main lên remote link
+```git push -u origin main``` - push code ở nhánh main lên remote link (đây là push lần đầu tiên, các lần sau muốn push lên remote mọi người chỉ cần ```git push``` là được nhé!)
 
 Khi push thành công, chúng ta sẽ được như thế này:
 
