@@ -66,4 +66,87 @@ Khi chúng ta làm việc trong 1 team, sẽ có 1 repo trên github dùng chung
 ![note](/lecture02/github.svg)
 
 Trong thực tế thì chúng ta không push thẳng code vào github như thế này, mà chúng ta sẽ tạo các nhánh riêng, gọi là branch.
-(phần này đang chờ bổ sung sau nhé...)
+
+***********
+
+Đầu tiên chúng ta cần biết mỗi commit đi vào sẽ tương tự như thế này
+![commit chain](/lecture02/git-commit-chain.png)
+
+Các commit sẽ gắn với nhau thành 1 chuỗi liên tục (giống như linked-list). Mỗi commit mới sẽ trỏ vào đầu commit trước đó. Ở phần trước, trước khi push lên github chúng ta có 1 lệnh:
+``git branch -m main``, chính là việc đánh dấu cho nhánh làm việc chính của chúng ta là main. Đây là nhánh chính, chỉ nên push những code đã kiểm tra kỹ vào nhánh này.
+
+Những code thêm vào để test thì chúng ta có thể tạo ra các nhánh khác. Tạo một nhánh, dùng lệnh:  ```git branch future-plans```
+
+Lệnh này sẽ tạo ra 1 branch mới tên là ```future-plans``` (tên nhánh có thể đặt bất kỳ). Mọi người có thể tham khảo cách đặt tên branch như bảng này:
+
+<table>
+  <thead>
+    <tr>
+      <th>Instance</th>
+      <th>Branch</th>
+      <th>Description, Instructions, Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Stable</td>
+      <td>stable</td>
+      <td>nhận merge từ Working và Hotfixes (chứa code ổn định nhất)</td>
+    </tr>
+    <tr>
+      <td>Working</td>
+      <td>master</td>
+      <td>nhận merge từ Features/Issues và Hotfixes (nhánh làm việc chính)</td>
+    </tr>
+    <tr>
+      <td>Features/Issues</td>
+      <td>topic-*</td>
+      <td>nhánh được tách từ HEAD của Working (nhánh phát triển tính năng hoặc sửa lỗi)</td>
+    </tr>
+    <tr>
+      <td>Hotfix</td>
+      <td>hotfix-*</td>
+      <td>nhánh được tách từ stable Stable (nhánh fix nhanh những lỗi phát sinh)</td>
+    </tr>
+  </tbody>
+</table>
+
+Nguồn: https://gist.github.com/digitaljhelms/4287848
+
+
+![](/lecture02/git-branch-01.png)
+
+Như trên hình, nhánh này được tạo ra rồi nhưng chúng ta vẫn còn ở nhánh main nha. Giờ chúng ta sẽ phải chuyển sang nhánh mới này để làm việc
+```git checkout future-plans```
+
+![](/lecture02/git-branch-02.png)
+
+Chúng ta có thể kiểm tra các branch đang có và mình đang ở branch nào thì dùng lệnh:
+
+```git branch```
+
+Tại thời điểm checkout sang nhánh mới thì mọi code thêm, xóa, sửa mới vào chỉ tồn tại trên nhánh đang làm việc mà thôi, hoàn toàn không ảnh hưởng đến branch khác.
+Giả sử tại nhanh future-plans này code bị lỗi thì chúng ta có thể dùng ```git checkout main``` để quay lại code ban đầu, và bắt đầu 1 nhánh khác để tiếp tục phát triển.
+
+Sau khi đã phát triển 1 nhánh hoàn thiện, thì chúng ta cần gộp nhánh đã tách vào lại main để sử dụng.
++ Branch ở local:
+ 
+	* Tại nhánh future-plans, kiểm tra các thay đổi đã commit chưa, nếu commit hết rồi thì ok nhé!
+	* Quay lại nhánh main: ``git checkout main``
+	* Gộp nhánh future-plans vào main: ``git merge future-plans``
+	* (Nếu) muốn xóa branch không cần dùng nữa đi: ``git branch -d future-plans``
++ Branch trên remote:
+	* Tại nhánh future-plans, kiểm tra các thay đổi đã commit chưa, nếu commit hết rồi thì ok nhé!
+	* Cũng tại nhánh này push lên remote bằng lệnh: ``git push origin future-plans``
+	* Đăng nhập github kiểm tra branch, chúng ta sẽ thấy có 1 branch mới.    
+![](/lecture02/github-branch-1.png)
+
+    * Vào phần Pull request (Tạm gọi là tạo 1 yêu cầu kiểm tra code mình muốn đưa vào), chọn ``New pull request`` 
+	* Tại đây chọn nhánh cần merge vào nhánh main (base - nhánh chính) ![](/lecture02/github-branch-3.png) => chọn ``Create pull request``, xuất hiện các thông tin sắp merge, cùng phần code thay đổi phía dưới, chúng ta kiểm tra lại rồi chọn ``Create pull request`` nếu thấy ok!
+	* Tại đây nếu code không có bị xung đột (conflict) thì sẽ chúng ta chọn ``Merge pull request`` ![](/lecture02/github-branch-4.png)
+	* Merge thàng công sẽ được như ảnh ![](/lecture02/github-branch-5.png)Quay lại mục code chúng ta sẽ thấy các thay đổi đã được merge vào main.
+  
+
+Phần này mình đã giới thiệu vài bước cơ bản trong quá trình sử dụng branch. Sẽ có 1 vấn đề khi code cùng 1 team là chúng ta vô tình modified cùng 1 file, khi đó merge vào thì sẽ bị báo là CONFLICT! Chúng ta sẽ tìm hiểu vấn đề này ở bài sau nhé !
+
+Mọi người thấy hữu ích hãy cho mình 1 sao, mọi sai sót, góp ý mọi người cứ thoải mái đóng góp cho mình ở phần Issues nhé ! Cảm ơn mọi người đã đọc! <3
