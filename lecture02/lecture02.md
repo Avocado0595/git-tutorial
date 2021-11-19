@@ -149,4 +149,7 @@ Sau khi đã phát triển 1 nhánh hoàn thiện, thì chúng ta cần gộp nh
 
 Phần này mình đã giới thiệu vài bước cơ bản trong quá trình sử dụng branch. Sẽ có 1 vấn đề khi code cùng 1 team là chúng ta vô tình modified cùng 1 file, khi đó merge vào thì sẽ bị báo là CONFLICT! Chúng ta sẽ tìm hiểu vấn đề này ở bài sau nhé !
 
+*Note: Trong quá trình push code lên github nếu ở phía github chúng ta có sử đổi trực tiếp trên đó thì push sẽ báo lỗi ``error: failed to push some refs to...``, và sẽ có ``hint: git pull`` . Lúc này chỉ cần làm theo gợi ý: ``git pull`` trước, rồi ``git push`` là được nhé!*
+
+
 Mọi người thấy hữu ích hãy cho mình 1 sao, mọi sai sót, góp ý mọi người cứ thoải mái đóng góp cho mình ở phần Issues nhé ! Cảm ơn mọi người đã đọc! <3
