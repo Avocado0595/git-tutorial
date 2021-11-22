@@ -11,7 +11,7 @@ Từ những vấn đề trên chúng ta có : Version control - Quản lý phi�
 
 #### Version control là gì?
 
-Version control (quản lý phiên bản) là việc chúng ta kiểm soát mọi sự thay đổi trong code như: thêm mới, sửa code cũ, xóa file, thêm file mới,…. Việc quản lý này không những giúp chúng ta luôn nắm bắt được mọi sự thay đổi trong code, mà còn giúp chúng ta dễ dàng duy trì, sửa lỗi, nâng cấp dự án của mình  một cách rõ ràng, khoa học.
+Version control (quản lý phiên bản) là việc chúng ta kiểm soát mọi sự thay đổi trong code (các phiên bản của code) như: thêm mới, sửa code cũ, xóa file, thêm file mới,…. Việc quản lý này không những giúp chúng ta luôn nắm bắt được mọi sự thay đổi trong code, mà còn giúp chúng ta dễ dàng duy trì, sửa lỗi, nâng cấp dự án của mình  một cách rõ ràng, khoa học.
 
 #### Git là một hệ thống quản lý phiên bản phân tán (Distributed Version Control System):
 
