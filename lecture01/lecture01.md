@@ -170,7 +170,7 @@ Lưu ý: ở phiên bản mới sau này github cần access token thay cho mậ
   + Gõ lệnh : ```git config credential.helper store``` *(dòng này để lưu lai thông tin login cho lần sau)*
   + Dùng lệnh push như bình thường: ```git push```
   + Sau đó git sẽ thông báo nhập name và password thì bạn nhập name login trên github, còn pass thì bạn dán access token vào. Thế là xong ! =))
-  + Lần sau chỉ cần ```git push``` là được!
+  + Lần sau chỉ cần ```git push``` (tuy nhiên sẽ có lúc chưa connect được branch ở local và remote thì git sẽ báo gợi ý là: ```git push --set-upstream origin master```) là được!
  
 2. Bạn muốn thay đổi link remote:
 	Bạn muốn tạo 1 repo mới trên github và muốn đổi code trên máy sang repo này thì thực hiện như sau:
