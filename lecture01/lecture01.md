@@ -4,7 +4,7 @@
   
 
 *Bài này hướng dẫn một vài bước cơ bản cho các bạn có thể sử dụng được git, up project của mình lên github để chia sẻ cho bạn bè hoặc chỉ lưu trữ.*
-
+(Link video demo: https://youtu.be/wPe8ZrQpV5Y)
   
   
 
