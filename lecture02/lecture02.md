@@ -38,8 +38,7 @@ Có  thể coi như là: Git = 1 phần mềm để quản lý phiên bản + H�
 
 *Có 1 câu hỏi nhỏ là: **tại sao phải add vào staging trước khi commit ?** – theo như mình đọc được một ví dụ như thế này: git là 1 thợ chụp ảnh, đang gọi 1 nhóm người ra để chụp, git add vào staging là người chụp ảnh đang chỉnh vị trí mọi người cho vừa khung ảnh (anh ta sẽ xem qua trong máy ảnh), còn git commit là chụp bức ảnh đấy. Như vậy, việc add vào staging cho chúng ta 1 bước để xem lại những thay đổi trước khi quyết định commit những thay đổi đó. Và dĩ nhiên nếu chúng ta chụp ảnh lệch chúng ta vẫn có thể chụp lại – nhưng mà sẽ phiền và mất thời gian đấy. Tương tự việc chúng ta quên xem thay đổi ở staging thì chúng ta vẫn có cách restore lại commit => và đương nhiên là sẽ tốn công hơn việc review trước ở staging rồi :”> .*
 
-* Review thay đổi ở staging bằng lệnh: ```git diff –-staged```
-* Remove những thay đổi không muốn bằng: ```git rm <file unstage>``` 
+* Review thay đổi ở staging bằng lệnh: ```git diff –-staged``` 
 * Để giữ những file trong working directory nhưng không theo dõi nó bằng git, thì chúng ta tạo 1 file tên là ```.gitignore``` trong thư mục tương ứng, sau đó thêm tên file hoặc thư mục không muốn add vào file này, mỗi tên cách nhau 1 hàng nhé. Ví dụ:
 
 ![note](/lecture02/gitignore.png)
