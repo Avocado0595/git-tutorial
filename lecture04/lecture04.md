@@ -22,7 +22,10 @@
 ![preserve-1](/lecture04/rebase-preserve.png)
    + ```git checkout new-branch03```
    + ```git rebase new-branch04 --preserve-merges``` (câu lệnh này đã bị deprecated, nếu không được mọi người có thể dùng ```git rebase new-branch04 --rebase-merges```).
-   ![preserve-2](/lecture04/rebase-preserve-2.png)
+
+
+![preserve-2](/lecture04/rebase-preserve-2.png)
+
 
    Lúc này chúng ta gắn dc ```new-branch03``` và branch của nó vào ```new-branch04```. Với branch có merge branch phụ như thế này mọi người nên dùng cách này nhé !
 #### 2. squash (nén commit khi rebase)
@@ -50,6 +53,7 @@
 
    Nhập ```:q``` để thoát.
   + Lúc này branch được rebase vào chỉ hiện 1 commit đã squash vào.
+
 ![rebase-i-4](/lecture04/rebase-i-4.png)
 
 
@@ -69,6 +73,7 @@ Giờ mình muốn dùng commit ``add 8`` này đưa vào master thì sẽ dùng
    + ``git cherry-pick <id của commit add 8>``
 
 Chúng ta sẽ copy được commit ``add 8`` này vào master.
+
 ![cherry-2](/lecture04/cherry-2.png)
 
 Mọi người có thể dùng ``git cherry-pick commit1 commit2 commit3`` để copy nhiều commit cùng lúc.
