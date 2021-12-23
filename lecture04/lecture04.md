@@ -11,7 +11,10 @@
    + ```git checkout feature/new01``` => chuyển về ```feature2/new01```.
     
   + ```git rebase feauture2/new01``` => lúc này ```feature/new01``` sẽ nối tiếp vào ```feauture2/new01```.
+
+
 ![rebase-2](/lecture04/rebase-2.png)
+
 
 (*2 branch màu hồng ban đầu giờ đã gộp thành 1 nhánh thẳng màu xanh*)
 
