@@ -16,10 +16,10 @@
 (*2 branch màu hồng ban đầu giờ đã gộp thành 1 nhánh thẳng màu xanh*)
 
 1.2. Trường hợp thứ 2 là rebase branch đã được merge từ branch khác - như branch ```new-branch03```dưới đây:
-![rebase-2](/lecture04/rebase-preserve.png)
+![preserve-1](/lecture04/rebase-preserve.png)
    + ```git checkout new-branch03```
    + ```git rebase new-branch04 --preserve-merges``` (câu lệnh này đã bị deprecated, nếu không được mọi người có thể dùng ```git rebase new-branch04 --rebase-merges```).
-   ![rebase-2](/lecture04/rebase-preserve-2.png)
+   ![preserve-2](/lecture04/rebase-preserve-2.png)
 
    Lúc này chúng ta gắn dc ```new-branch03``` và branch của nó vào ```new-branch04```. Với branch có merge branch phụ như thế này mọi người nên dùng cách này nhé !
 #### 2. squash (nén commit khi rebase)
@@ -27,7 +27,7 @@
   Bạn có quá nhiều commit trên 1 branch và muốn nén nó lại cho gọn? Hãy dùng:
    + ```git rebase -i```
    
-![rebase-2](/lecture04/rebase-i-1.png)
+![rebase-i-1](/lecture04/rebase-i-1.png)
 
    + Một editor hiện ra, chúng ta có thể chỉnh các commit về squash, mọi người vẫn còn nhớ cú pháp với editor này chứ =))
 
@@ -35,17 +35,19 @@
    
    Dùng phím mũi tên để di chuyển đến nơi cần chỉnh sửa: mình sẽ di chuyển con trỏ đến dòng ```pick``` thứ 2 và chỉnh thành ```squash```. Tức là mình sẽ nén 2 commit này lại thành 1 commit ```add 05 1```. Còn những tùy chọn bên dưới mọi người có thể tham khảo thêm trên google nhé!
 
+![rebase-i-2](/lecture04/rebase-i-2.png)
+
    Nhấn ```ESC``` để thoát chế độ insert.
 
    Nhập ```:wq``` để lưu và thoát.
 
-![rebase-2](/lecture04/rebase-i-3.png)
+![rebase-i-3](/lecture04/rebase-i-3.png)
 
    Bảng này hiện lại để chúng ta xem lại những thông tin đã thay đổi.
 
    Nhập ```:q``` để thoát.
   + Lúc này branch được rebase vào chỉ hiện 1 commit đã squash vào.
-![rebase-2](/lecture04/rebase-i-4.png)
+![rebase-i-4](/lecture04/rebase-i-4.png)
 
 
 
