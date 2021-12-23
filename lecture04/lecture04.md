@@ -1,4 +1,4 @@
-## rebase và cherry-pick
+## rebase, squash và cherry-pick
 
 #### 1. ```git rebase``` thay gốc 1 branch:
  Ví dụ mình có 2 branch ở 2 thời điểm khác nhau là ```feature/new01``` và ```feature2/new01```:
