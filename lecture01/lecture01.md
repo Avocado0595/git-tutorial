@@ -177,3 +177,6 @@ Lưu ý: ở phiên bản mới sau này github cần access token thay cho mậ
 	* Kiểm tra link remote cũ: ```git remote -v``` , bạn sẽ thấy link remote mình đã add trước đây
 	* Sau đó gõ: ```git remote set-url origin <link repo mới>```
 	* Rồi kiểm tra lại bằng ```git remote -v``` là được nha!
+
+
+### Github với SSH
